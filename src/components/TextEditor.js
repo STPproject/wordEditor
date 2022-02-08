@@ -1,0 +1,19 @@
+import React, { Component } from 'react';
+import { Editor } from "react-draft-wysiwyg";
+import {editorState} from 'draft-js';
+import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
+export default class TextEditor extends Component {
+  render() {
+    return <div>
+        <Editor
+  editorState={editorState}
+  toolbarClassName="toolbarClassName"
+  wrapperClassName="wrapperClassName"
+  editorClassName="editorClassName"
+  onEditorStateChange={this.onEditorStateChange}
+/>;
+        </div>;
+  }
+}
+
+
